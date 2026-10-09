@@ -1,14 +1,6 @@
 FROM nvidia/cuda:11.3.1-runtime-ubuntu20.04
 
 # -----------------------------
-# Proxy support (important for locked-down network)
-# -----------------------------
-ENV http_proxy=http://10.34.0.12:3128
-ENV https_proxy=http://10.34.0.12:3128
-ENV HTTP_PROXY=http://10.34.0.12:3128
-ENV HTTPS_PROXY=http://10.34.0.12:3128
-
-# -----------------------------
 # Install python + pip
 # -----------------------------
 RUN apt-get update && \
